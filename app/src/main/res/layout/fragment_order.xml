@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Fragment.OrderFragment">
+
+        <include
+            android:id="@+id/appbarLayout"
+            layout="@layout/toolbar" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcTeamContactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbarLayout"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_customer_list" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbScanner"
+            style="@style/style_FB_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_10dp"
+            android:src="@drawable/ic_baseline_qr_code_scanner_24"
+            app:tint="@android:color/black" />
+
+    </RelativeLayout>
+</layout>
