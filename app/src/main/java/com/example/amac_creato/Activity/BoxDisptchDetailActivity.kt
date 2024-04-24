@@ -101,7 +101,6 @@ class BoxDisptchDetailActivity : AppCompatActivity(), ApiResponseListner,
         binding.rcHardware.isNestedScrollingEnabled = false
         mAdapterHardware.notifyDataSetChanged()
 
-
     }
 
     fun handleProductList(

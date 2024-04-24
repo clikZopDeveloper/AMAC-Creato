@@ -51,7 +51,7 @@ ConnectivityListener.ConnectivityReceiverListener {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        val drawerLayout: DrawerLayout = binding.drawerLayout
+       // val drawerLayout: DrawerLayout = binding.drawerLayout
         //  val navView: NavigationView = binding.navView
         val navBottomView: BottomNavigationView = binding.appBarMain.bottomNavView
         myReceiver = ConnectivityListener()
@@ -60,7 +60,7 @@ ConnectivityListener.ConnectivityReceiverListener {
             navController = findNavController(R.id.nav_host_fragment_activity_main)
 
         binding.appBarMain.appbarLayout.ivMenu.setOnClickListener {
-            drawerLayout.open()
+       //     drawerLayout.open()
         }
 
         if (SalesApp.isEnableScreenshort==true){

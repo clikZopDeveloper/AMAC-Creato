@@ -36,6 +36,8 @@ data class CustOrderDetailBean(
         val price: String,
         @SerializedName("product_id")
         val productId: Int,
+        @SerializedName("production_scan")
+        val production_scan: Int,
         @SerializedName("production_barcode")
         val productionBarcode: Any,
         @SerializedName("qty")

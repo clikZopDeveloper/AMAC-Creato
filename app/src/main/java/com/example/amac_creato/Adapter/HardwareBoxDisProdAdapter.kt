@@ -58,12 +58,14 @@ class HardwareBoxDisProdAdapter(
         holder.tvBarcode.text = mFilteredList[position].productionBarcode?.toString()
         holder.tvDate.text = mFilteredList[position].createdAt.toString()
         holder.tvQty.text = "QTY : "+mFilteredList[position].qty.toString()
+        holder.tvPackedScan.text = mFilteredList[position].packed_scan.toString()
         holder.itemView.setOnClickListener {
             rvClickListner.clickPos(data, mFilteredList[position].id)
         }
         holder.ivScanner.visibility=View.GONE
         holder.ivVerifyed.visibility=View.GONE
         holder.checkBox.visibility=View.GONE
+
        /* if ( mFilteredList[position].isPacked==1){
             holder.ivScanner.visibility=View.GONE
             holder.ivVerifyed.visibility=View.VISIBLE
@@ -88,6 +90,7 @@ class HardwareBoxDisProdAdapter(
             Log.d("zxczxc", Gson().toJson(data))
             //   rvClickListner.clickPos(data, mFilteredList[position].id)
         }*/
+
         /*holder.ivScanner.setOnClickListener {
             context.startActivityForResult(
                 Intent(context, BarcodeScanActivity::class.java)
@@ -116,16 +119,14 @@ class HardwareBoxDisProdAdapter(
     }
 
     inner class MyViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
-
         val tvName: TextView = itemview.findViewById(R.id.tvName)
         val tvBarcode: TextView = itemview.findViewById(R.id.tvBarcode)
         val tvDate: TextView = itemview.findViewById(R.id.tvDate)
         val tvQty: TextView = itemview.findViewById(R.id.tvQty)
         val ivScanner: ImageView = itemview.findViewById(R.id.ivScanner)
+        val tvPackedScan: TextView = itemview.findViewById(R.id.tvPackedScan)
         val ivVerifyed: ImageView = itemview.findViewById(R.id.ivVerifyed)
         val checkBox: CheckBox = itemview.findViewById(R.id.checkBox)
-
-
 
     }
 

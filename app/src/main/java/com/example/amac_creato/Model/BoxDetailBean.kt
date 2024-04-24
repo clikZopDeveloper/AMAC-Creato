@@ -48,6 +48,8 @@ data class BoxDetailBean(
             val productionBarcode: Any,
             @SerializedName("qty")
             val qty: Int,
+            @SerializedName("packed_scan")
+            val packed_scan: Int,
             @SerializedName("slot_id")
             val slotId: Int,
             @SerializedName("status")

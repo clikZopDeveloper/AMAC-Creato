@@ -51,6 +51,7 @@ class CustOrderDetailAdapter(
         holder.tvName.text = mFilteredList[position].name
         holder.tvBarcode.text = mFilteredList[position].productionBarcode?.toString()
         holder.tvQty.text ="QTY : "+ mFilteredList[position].qty.toString()
+        holder.tvProductionScan.text =mFilteredList[position].production_scan.toString()
         holder.tvDate.text = mFilteredList[position].createdAt.toString()
         holder.ivScanner.setOnClickListener {
             rvClickListner.clickPos("", mFilteredList.get(position).id)
@@ -95,6 +96,7 @@ class CustOrderDetailAdapter(
         val tvQty: TextView = itemview.findViewById(R.id.tvQty)
         val tvBarcode: TextView = itemview.findViewById(R.id.tvBarcode)
         val tvDate: TextView = itemview.findViewById(R.id.tvDate)
+        val tvProductionScan: TextView = itemview.findViewById(R.id.tvProductionScan)
 
 
 
