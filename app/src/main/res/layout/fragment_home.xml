@@ -7,11 +7,9 @@
 
     </data>
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -36,7 +34,7 @@
                             android:layout_height="250dp"
                             android:background="@color/vlight_color"
                             android:orientation="vertical">
-
+                      <!--      Fields to be added - Article code, brand name, bar code name-->
                             <TextView
                                 android:id="@+id/tvUserName"
                                 android:layout_width="wrap_content"

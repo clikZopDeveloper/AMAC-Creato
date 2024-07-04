@@ -89,15 +89,19 @@ class HomeFragment : Fragment(), ApiResponseListner, View.OnClickListener {
             startActivity(Intent(requireActivity(), CustOrderListActivity::class.java))
 
         }
+
         binding.llPackedCompOut.setOnClickListener {
 
         }
+
         binding.llPackedNewSlot.setOnClickListener {
             startActivity(Intent(requireActivity(), SlotPackerListActivity::class.java))
         }
+
         binding.llPackedCompSlot.setOnClickListener {
 
         }
+
         binding.llPackedHistory.setOnClickListener {
 
         }
@@ -109,15 +113,19 @@ class HomeFragment : Fragment(), ApiResponseListner, View.OnClickListener {
             startActivity(Intent(requireActivity(), CustOrderDispchListActivity::class.java))
 
         }
+
         binding.llDeliverd.setOnClickListener {
 
         }
+
         binding.tvDisptchComp.setOnClickListener {
 
         }
+
         binding.llDelPending.setOnClickListener {
 
         }
+
         binding.llDelDeliverd.setOnClickListener {
 
         }
@@ -148,7 +156,6 @@ class HomeFragment : Fragment(), ApiResponseListner, View.OnClickListener {
         return root
 
     }
-
 
     fun apiAllGet() {
         SalesApp.isAddAccessToken = true

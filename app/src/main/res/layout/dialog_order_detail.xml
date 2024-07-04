@@ -110,6 +110,33 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dip"
+                    android:padding="@dimen/_2dip"
+                    android:layout_marginHorizontal="@dimen/_5dip"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Article Code : "
+                        android:layout_below="@+id/tvDate"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/_12sp" />
+                    <TextView
+                        android:id="@+id/tvArticleQty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_5dip"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10dp"
                     android:padding="@dimen/_2dip"
                     android:layout_gravity="center"

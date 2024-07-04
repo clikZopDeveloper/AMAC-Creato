@@ -8,13 +8,17 @@ import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.text.TextUtils
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
+import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModel
@@ -28,14 +32,13 @@ import com.example.amac_creato.Utills.PrefManager
 import com.example.amac_creato.Utills.SalesApp
 import com.example.amac_creato.Utills.Utility
 import com.example.amac_creato.databinding.ActivityLoginBinding
-
 import com.example.amac_creato.viewmodelactivity.LoginViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 import com.stpl.antimatter.Utils.ApiContants
-import java.util.Locale
+import java.util.*
 
 class LoginActivity : AppCompatActivity(), ApiResponseListner {
     private lateinit var binding: ActivityLoginBinding
@@ -235,6 +238,22 @@ class LoginActivity : AppCompatActivity(), ApiResponseListner {
             }
         } else {
             //  checkPermissions()
+        }
+    }
+
+    fun ShowHidePass(view: View) {
+        if (view.id == R.id.ivEye) {
+            if (binding.editPassword.getTransformationMethod()
+                    .equals(PasswordTransformationMethod.getInstance())
+            ) {
+                (view as ImageView).setImageResource(R.drawable.baseline_visibility_off_24)
+                //Show Password
+                binding.editPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
+            } else {
+                (view as ImageView).setImageResource(R.drawable.baseline_visibility_24)
+                //Hide Password
+                binding.editPassword.setTransformationMethod(PasswordTransformationMethod.getInstance())
+            }
         }
     }
 }

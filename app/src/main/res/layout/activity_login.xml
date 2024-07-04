@@ -37,7 +37,7 @@
             android:id="@+id/editMobNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Username"
+            android:hint="Enter Your Mobile Number"
             android:text=""
             android:background="@drawable/btn_round_shape_white"
             android:layout_marginHorizontal="15dp"
@@ -48,19 +48,35 @@
             android:inputType="number"
             android:textSize="@dimen/_14sp"
             android:singleLine="true"/>
-        <EditText
-            android:id="@+id/editPassword"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Password"
-            android:text=""
-            android:background="@drawable/btn_round_shape_white"
+            android:layout_marginTop="10dp"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="@dimen/_10dp"
-            android:paddingVertical="@dimen/_10dp"
-            android:paddingHorizontal="@dimen/_6dp"
-            android:textSize="@dimen/_14sp"
-            android:singleLine="true"/>
+            android:background="@drawable/btn_round_shape_white"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginEnd="@dimen/_5dip"
+                android:background="@drawable/btn_round_shape_white"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:hint="Enter Password"/>
+            <ImageView
+                android:id="@+id/ivEye"
+                android:layout_width="@dimen/_30dip"
+                android:layout_height="@dimen/_30dip"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_5dip"
+                android:onClick="ShowHidePass"
+                android:src="@drawable/baseline_visibility_24"/>
+        </LinearLayout>
         <!--     android:text="@={loginViewModel.mobileNo}"-->
 
         <com.google.android.material.textview.MaterialTextView
