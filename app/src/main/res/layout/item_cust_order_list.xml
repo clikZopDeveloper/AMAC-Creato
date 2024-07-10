@@ -71,11 +71,11 @@
                     android:layout_below="@+id/tvDate"
                     android:layout_gravity="center"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="User : "
+                    android:text="Mobile Number : "
                     android:textSize="@dimen/_12sp" />
 
                 <TextView
-                    android:id="@+id/tvUser"
+                    android:id="@+id/tvMobNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvDate"

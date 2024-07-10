@@ -56,6 +56,7 @@ class HardwareProdListAdapter(
         holder.tvName.text = mFilteredList[position].product
         holder.tvBarcode.text = mFilteredList[position].productionBarcode?.toString()
         holder.tvDate.text = mFilteredList[position].createdAt.toString()
+        holder.tvPackedScan.text = mFilteredList[position].packedScan.toString()
         holder.tvQty.text = "QTY : "+mFilteredList[position].qty.toString()
         holder.itemView.setOnClickListener {
             rvClickListner.clickPos(data, mFilteredList[position].id)
@@ -118,6 +119,7 @@ class HardwareProdListAdapter(
         val tvBarcode: TextView = itemview.findViewById(R.id.tvBarcode)
         val tvDate: TextView = itemview.findViewById(R.id.tvDate)
         val tvQty: TextView = itemview.findViewById(R.id.tvQty)
+        val tvPackedScan: TextView = itemview.findViewById(R.id.tvPackedScan)
         val ivScanner: ImageView = itemview.findViewById(R.id.ivScanner)
         val ivVerifyed: ImageView = itemview.findViewById(R.id.ivVerifyed)
         val checkBox: CheckBox = itemview.findViewById(R.id.checkBox)

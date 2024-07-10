@@ -142,11 +142,11 @@ class BarcodeScanActivity : AppCompatActivity() {
 
         barcodeDetector.setProcessor(object : Detector.Processor<Barcode> {
             override fun release() {
-                Toast.makeText(
+          /*      Toast.makeText(
                     applicationContext,
                     "Barcode Scanner has been closed",
                     Toast.LENGTH_SHORT
-                ).show()
+                ).show()*/
             }
 
             override fun receiveDetections(detections: Detector.Detections<Barcode>) {
@@ -213,8 +213,8 @@ class BarcodeScanActivity : AppCompatActivity() {
 
         barcodeDetector.setProcessor(object : Detector.Processor<Barcode> {
             override fun release() {
-                Toast.makeText(applicationContext, "Scanner has been closed", Toast.LENGTH_SHORT)
-                    .show()
+              /*  Toast.makeText(applicationContext, "Scanner has been closed", Toast.LENGTH_SHORT)
+                    .show()*/
             }
 
             override fun receiveDetections(detections: Detector.Detections<Barcode>) {

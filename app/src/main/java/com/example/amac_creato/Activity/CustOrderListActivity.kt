@@ -57,7 +57,7 @@ class CustOrderListActivity : AppCompatActivity(), ApiResponseListner,
         binding.igToolbar.tvTitle.text = "All Customer Orders"
 
       //  intent.getStringExtra("customer_id")?.let { apiCustOrderList(it) }
-        apiCustOrderList("")
+
     }
 
     fun apiCustOrderList(custID: String) {
@@ -257,8 +257,8 @@ class CustOrderListActivity : AppCompatActivity(), ApiResponseListner,
     override fun onResume() {
         GeneralUtilities.registerBroadCastReceiver(this, myReceiver)
         SalesApp.setConnectivityListener(this)
-
         super.onResume()
+        apiCustOrderList("")
     }
 
     override fun onNetworkConnectionChange(isconnected: Boolean) {

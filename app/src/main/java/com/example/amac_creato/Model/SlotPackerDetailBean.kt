@@ -28,6 +28,8 @@ data class SlotPackerDetailBean(
             val isOrder: Int,
             @SerializedName("is_packed")
             val isPacked: Int,
+            @SerializedName("packed_scan")
+            val packedScan: Int,
             @SerializedName("is_production")
             val isProduction: Int,
             @SerializedName("mst_id")

@@ -73,7 +73,6 @@ public class SalesApp extends Application implements Application.ActivityLifecyc
     @Override
     public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
         Utility.Companion.changeStatusBarColor(activity);
-
         new GPSTrackerFus(activity, new GPSTrackerFus.LocationInterface() {
             @Override
             public void locationReceived(Location location) {

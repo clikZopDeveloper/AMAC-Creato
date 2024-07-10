@@ -46,8 +46,8 @@ class CustOrderListAdapter(
              holder.tvAdd.visibility = View.VISIBLE*/
 
         holder.tvCustomer.text = mFilteredList[position].customerName
-        holder.tvLocation.text = mFilteredList[position].mobile
-        holder.tvUser.text = mFilteredList[position].address+"\n"+mFilteredList[position].state+" "+mFilteredList[position].city+" "+mFilteredList[position].pincode
+        holder.tvMobNo.text = mFilteredList[position].mobile
+        holder.tvLocation.text = mFilteredList[position].address+"\n"+mFilteredList[position].state+" "+mFilteredList[position].city+" "+mFilteredList[position].pincode
         holder.tvInvoiceDate.text = mFilteredList[position].expectedPackingDate.toString()
         holder.tvDate.text = mFilteredList[position].expectedDeliveryDate.toString()
         holder.itemView.setOnClickListener {
@@ -74,7 +74,7 @@ class CustOrderListAdapter(
     inner class MyViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
 
         val tvCustomer: TextView = itemview.findViewById(R.id.tvCustomer)
-        val tvUser: TextView = itemview.findViewById(R.id.tvUser)
+        val tvMobNo: TextView = itemview.findViewById(R.id.tvMobNo)
         val tvLocation: TextView = itemview.findViewById(R.id.tvLocation)
         val tvInvoiceDate: TextView = itemview.findViewById(R.id.tvInvoiceDate)
         val tvDate: TextView = itemview.findViewById(R.id.tvDate)

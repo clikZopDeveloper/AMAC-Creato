@@ -53,7 +53,7 @@ class SlotPackerListActivity : AppCompatActivity(), ApiResponseListner,
         binding.igToolbar.ivMenu.setOnClickListener { finish() }
         binding.igToolbar.tvTitle.text = "All Slot Packer"
 
-        apiSlotPackerList()
+
 
     }
 
@@ -165,8 +165,8 @@ class SlotPackerListActivity : AppCompatActivity(), ApiResponseListner,
     override fun onResume() {
         GeneralUtilities.registerBroadCastReceiver(this, myReceiver)
         SalesApp.setConnectivityListener(this)
-
         super.onResume()
+        apiSlotPackerList()
     }
 
     override fun onNetworkConnectionChange(isconnected: Boolean) {

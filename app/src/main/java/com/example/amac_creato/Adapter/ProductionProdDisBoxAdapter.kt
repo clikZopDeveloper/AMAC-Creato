@@ -64,6 +64,7 @@ class ProductionProdDisBoxAdapter(
         }
         holder.ivScanner.visibility=View.GONE
         holder.checkBox.visibility=View.GONE
+
       /*  if ( mFilteredList[position].isPacked==1){
             holder.ivScanner.visibility=View.GONE
             holder.ivVerifyed.visibility=View.VISIBLE

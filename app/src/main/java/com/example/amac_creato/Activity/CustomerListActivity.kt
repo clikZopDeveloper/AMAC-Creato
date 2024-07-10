@@ -60,7 +60,7 @@ class CustomerListActivity : AppCompatActivity(), ApiResponseListner,
         binding.igToolbar.ivMenu.setOnClickListener { finish() }
         binding.igToolbar.tvTitle.text = "All Customer"
 
-        apiAllCustomerList()
+
     }
 
     fun apiAllCustomerList() {
@@ -144,8 +144,8 @@ class CustomerListActivity : AppCompatActivity(), ApiResponseListner,
     override fun onResume() {
         GeneralUtilities.registerBroadCastReceiver(this, myReceiver)
         SalesApp.setConnectivityListener(this)
-
         super.onResume()
+        apiAllCustomerList()
     }
 
     override fun onNetworkConnectionChange(isconnected: Boolean) {

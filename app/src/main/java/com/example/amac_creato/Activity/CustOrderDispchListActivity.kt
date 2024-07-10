@@ -50,7 +50,7 @@ class CustOrderDispchListActivity : AppCompatActivity(), ApiResponseListner,
         binding.igToolbar.ivMenu.setOnClickListener { finish() }
         binding.igToolbar.tvTitle.text = "Customer Order Dispatch"
 
-        apiCusOrderDsiptchList()
+
     }
 
     fun apiCusOrderDsiptchList() {
@@ -134,8 +134,8 @@ class CustOrderDispchListActivity : AppCompatActivity(), ApiResponseListner,
     override fun onResume() {
         GeneralUtilities.registerBroadCastReceiver(this, myReceiver)
         SalesApp.setConnectivityListener(this)
-
         super.onResume()
+        apiCusOrderDsiptchList()
     }
 
     override fun onNetworkConnectionChange(isconnected: Boolean) {
