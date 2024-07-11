@@ -16,6 +16,7 @@ import com.example.amac_creato.Adapter.HardwareProdListAdapter
 import com.example.amac_creato.Adapter.ProductionProdListAdapter
 import com.example.amac_creato.ApiHelper.ApiController
 import com.example.amac_creato.ApiHelper.ApiResponseListner
+import com.example.amac_creato.Model.BarcodepckerDetailBean
 import com.example.amac_creato.Model.CustOrderListBean
 import com.example.amac_creato.Model.MultipleProductBean
 import com.example.amac_creato.Model.SlotPackerDetailBean
@@ -102,14 +103,15 @@ class PackerDetailActivity : AppCompatActivity(), ApiResponseListner,
             }
 
             if (tag == ApiContants.getBarcodePacker) {
-                val custOrderListBean = apiClient.getConvertIntoModel<CustOrderListBean>(
+                val barcodepckerDetailBean = apiClient.getConvertIntoModel<BarcodepckerDetailBean>(
                     jsonElement.toString(),
-                    CustOrderListBean::class.java
+                    BarcodepckerDetailBean::class.java
                 )
 
-                if (custOrderListBean.error == false) {
-                    Toast.makeText(this, custOrderListBean.msg, Toast.LENGTH_SHORT).show()
-                    // apiTeamContactList(intent.getStringExtra("customer_id")!!)
+                if (barcodepckerDetailBean.error == false) {
+                    Toast.makeText(this, barcodepckerDetailBean.msg, Toast.LENGTH_SHORT).show()
+                   //  apiTeamContactList(intent.getStringExtra("customer_id")!!)
+                    apiSlotPackerDetail(barcodepckerDetailBean.data.slotId.toString())
                 }
 
             }
@@ -287,5 +289,4 @@ class PackerDetailActivity : AppCompatActivity(), ApiResponseListner,
         // Start the LocationService when the app is closed
         //    startService(Intent(this, LocationService::class.java))
     }
-
 }
