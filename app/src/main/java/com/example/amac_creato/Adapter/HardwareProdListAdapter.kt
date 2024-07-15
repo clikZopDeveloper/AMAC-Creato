@@ -62,6 +62,7 @@ class HardwareProdListAdapter(
             rvClickListner.clickPos(data, mFilteredList[position].id)
         }
 
+
         if ( mFilteredList[position].isPacked==1){
             holder.ivScanner.visibility=View.GONE
             holder.ivVerifyed.visibility=View.VISIBLE
@@ -114,7 +115,6 @@ class HardwareProdListAdapter(
     }
 
     inner class MyViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
-
         val tvName: TextView = itemview.findViewById(R.id.tvName)
         val tvBarcode: TextView = itemview.findViewById(R.id.tvBarcode)
         val tvDate: TextView = itemview.findViewById(R.id.tvDate)
@@ -123,8 +123,6 @@ class HardwareProdListAdapter(
         val ivScanner: ImageView = itemview.findViewById(R.id.ivScanner)
         val ivVerifyed: ImageView = itemview.findViewById(R.id.ivVerifyed)
         val checkBox: CheckBox = itemview.findViewById(R.id.checkBox)
-
-
 
     }
 

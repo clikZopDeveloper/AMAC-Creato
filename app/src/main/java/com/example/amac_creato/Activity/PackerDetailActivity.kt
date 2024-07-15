@@ -39,7 +39,6 @@ class PackerDetailActivity : AppCompatActivity(), ApiResponseListner,
     private lateinit var binding: ActivityPackerDetailBinding
     private lateinit var apiClient: ApiController
     var myReceiver: ConnectivityListener? = null
-
     var activity: Activity = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,7 +78,6 @@ class PackerDetailActivity : AppCompatActivity(), ApiResponseListner,
         params["slot_id"] = id.toString()
         apiClient.progressView.showLoader()
         apiClient.getApiPostCall(ApiContants.GetSlotPackerDetail, params)
-
     }
 
     override fun success(tag: String?, jsonElement: JsonElement?) {

@@ -39,13 +39,13 @@ class BarcodeScanActivity : AppCompatActivity() {
     private var orderProductID = ""
     private var variant = ""
     private lateinit var binding: ActivityBarcodeScanBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_barcode_scan)
         binding = ActivityBarcodeScanBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
 
          orderProductID= intent.getStringExtra("orderProductID").toString()
         if (intent.hasExtra("variant")){
@@ -169,6 +169,7 @@ class BarcodeScanActivity : AppCompatActivity() {
                 }
             }
         })
+
     }
 
     private fun setupControls() {

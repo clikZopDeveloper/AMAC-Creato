@@ -87,11 +87,9 @@ class HomeFragment : Fragment(), ApiResponseListner, View.OnClickListener {
         ///////// Packed Section //////////
         binding.llPackedReqOut.setOnClickListener {
             startActivity(Intent(requireActivity(), CustOrderListActivity::class.java))
-
         }
 
         binding.llPackedCompOut.setOnClickListener {
-
         }
 
         binding.llPackedNewSlot.setOnClickListener {
@@ -99,36 +97,29 @@ class HomeFragment : Fragment(), ApiResponseListner, View.OnClickListener {
         }
 
         binding.llPackedCompSlot.setOnClickListener {
-
         }
 
         binding.llPackedHistory.setOnClickListener {
-
         }
 
         /////////////// Dispatched Section ////////////////
 
         binding.llPending.setOnClickListener {
-
             startActivity(Intent(requireActivity(), CustOrderDispchListActivity::class.java))
-
         }
 
         binding.llDeliverd.setOnClickListener {
-
         }
 
         binding.tvDisptchComp.setOnClickListener {
-
         }
 
         binding.llDelPending.setOnClickListener {
-
         }
 
         binding.llDelDeliverd.setOnClickListener {
-
         }
+
 
      /*   binding.llPending.setOnClickListener {
             shopActivity.navController.navigate(R.id.action_navigation_home_to_navigation_order)
@@ -138,9 +129,7 @@ class HomeFragment : Fragment(), ApiResponseListner, View.OnClickListener {
         binding.llDeliverd.setOnClickListener {
             shopActivity.navController.navigate(R.id.action_navigation_home_to_navigation_order)
 
-        }*/
-
-        /*    binding.llApproved.setOnClickListener {
+        }  binding.llApproved.setOnClickListener {
                 shopActivity.navController.navigate(R.id.action_navigation_home_to_navigation_order)
 
             }

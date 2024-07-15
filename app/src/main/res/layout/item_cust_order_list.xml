@@ -27,6 +27,35 @@
             android:padding="@dimen/_6dp">
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5dip"
+                android:layout_marginTop="@dimen/_5dip"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Order ID : "
+                    android:textSize="@dimen/_12sp" />
+
+                <TextView
+                    android:id="@+id/tvOrderID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/llName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

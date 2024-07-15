@@ -11,12 +11,14 @@ data class SlotPackerDetailBean(
     @SerializedName("msg")
     val msg: String
 ) {
+
     data class Data(
         @SerializedName("hardware_products")
         val hardwareProducts: List<HardwareProduct>,
         @SerializedName("production_products")
         val productionProducts: List<ProductionProduct>
     ) {
+
         data class HardwareProduct(
             @SerializedName("booked_qty")
             val bookedQty: Int,
@@ -57,7 +59,6 @@ data class SlotPackerDetailBean(
             @SerializedName("variant")
             val variant: String
         )
-
         data class ProductionProduct(
             @SerializedName("barcode")
             val barcode: String,
@@ -84,5 +85,6 @@ data class SlotPackerDetailBean(
             @SerializedName("variant")
             val variant: String
         )
+
     }
 }

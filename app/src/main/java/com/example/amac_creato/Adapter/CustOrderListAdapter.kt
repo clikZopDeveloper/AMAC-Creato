@@ -45,6 +45,7 @@ class CustOrderListAdapter(
              holder.tvOff.background = RoundView(context.resources.getColor(R.color.orange), RoundView.getRadius(20f))
              holder.tvAdd.visibility = View.VISIBLE*/
 
+        holder.tvOrderID.text = mFilteredList[position].order_id.toString()
         holder.tvCustomer.text = mFilteredList[position].customerName
         holder.tvMobNo.text = mFilteredList[position].mobile
         holder.tvLocation.text = mFilteredList[position].address+"\n"+mFilteredList[position].state+" "+mFilteredList[position].city+" "+mFilteredList[position].pincode
@@ -78,6 +79,7 @@ class CustOrderListAdapter(
         val tvLocation: TextView = itemview.findViewById(R.id.tvLocation)
         val tvInvoiceDate: TextView = itemview.findViewById(R.id.tvInvoiceDate)
         val tvDate: TextView = itemview.findViewById(R.id.tvDate)
+        val tvOrderID: TextView = itemview.findViewById(R.id.tvOrderID)
 
         val cardView: CardView = itemview.findViewById(R.id.cardView)
 

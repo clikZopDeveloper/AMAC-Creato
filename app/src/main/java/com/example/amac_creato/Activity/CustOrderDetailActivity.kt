@@ -21,6 +21,7 @@ import com.example.amac_creato.Adapter.CustOrderListAdapter
 import com.example.amac_creato.Adapter.CustomerInterstedAdapter
 import com.example.amac_creato.ApiHelper.ApiController
 import com.example.amac_creato.ApiHelper.ApiResponseListner
+import com.example.amac_creato.Model.BarcodeDetailBean
 import com.example.amac_creato.Model.CustOrderDetailBean
 import com.example.amac_creato.Model.CustOrderListBean
 import com.example.amac_creato.Model.CustomerDetailBean
@@ -67,7 +68,6 @@ class CustOrderDetailActivity : AppCompatActivity(), ApiResponseListner,
         params["barcode"] =scannedValue.toString()
         apiClient.progressView.showLoader()
         apiClient.getApiPostCall(ApiContants.getBarcode, params)
-
     }
 
     fun apiCustomerDetail(id: String) {
@@ -92,14 +92,16 @@ class CustOrderDetailActivity : AppCompatActivity(), ApiResponseListner,
                     handleCustOrderList(custOrderDetailBean.data)
                 }
             }
+
             if (tag == ApiContants.getBarcode) {
-                val custOrderListBean = apiClient.getConvertIntoModel<CustOrderListBean>(
+                val custOrderListBean = apiClient.getConvertIntoModel<BarcodeDetailBean>(
                     jsonElement.toString(),
-                    CustOrderListBean::class.java
+                    BarcodeDetailBean::class.java
                 )
 
                 if (custOrderListBean.error == false) {
-                    Toast.makeText(this, custOrderListBean.msg, Toast.LENGTH_SHORT).show()
+                    apiCustomerDetail(custOrderListBean.orderId)
+                    //Toast.makeText(this, custOrderListBean.msg, Toast.LENGTH_SHORT).show()
                     // apiTeamContactList(intent.getStringExtra("customer_id")!!)
                 }
 

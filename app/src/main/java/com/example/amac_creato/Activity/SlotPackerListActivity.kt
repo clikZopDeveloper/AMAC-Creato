@@ -53,8 +53,6 @@ class SlotPackerListActivity : AppCompatActivity(), ApiResponseListner,
         binding.igToolbar.ivMenu.setOnClickListener { finish() }
         binding.igToolbar.tvTitle.text = "All Slot Packer"
 
-
-
     }
 
     fun apiSlotPackerList() {

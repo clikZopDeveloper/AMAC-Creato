@@ -22,6 +22,8 @@ data class CustOrderListBean(
         val customerId: Int,
         @SerializedName("customer_name")
         val customerName: String,
+        @SerializedName("order_id")
+        val order_id: String,
         @SerializedName("description")
         val description: String,
         @SerializedName("expected_delivery_date")
